@@ -2,6 +2,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'Examen Corto 3'
+
 @app.route('/misDatos',methods=['GET'])
 def misDatos():
     return jsonify({'carne':200512025,
